@@ -1,5 +1,5 @@
 pipeline {
-    agent label {
+    agent {
         docker { image 'ubuntu:latest' }
     }
     stages {
