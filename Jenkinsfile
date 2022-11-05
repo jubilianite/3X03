@@ -4,6 +4,7 @@ pipeline {
 		stage('Checkout SCM') {
 			steps {
 				//git '/home/3X03' 
+				sh 'pass'
 			}
 		}
 
