@@ -21,7 +21,7 @@ use PHPUnit\Framework\TestCase;
 //	}
 //}
 
-class MyScriptTest extends PHPUnit_Framework_TestCase {
+class MyScriptTest extends TestCase {
     public function testMyFunction() {
         include_once '/../checkpassword.php';
         $result = checkpassword("password");
