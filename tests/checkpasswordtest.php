@@ -21,10 +21,10 @@ require 'checkpassword.php';
 //	}
 //}
 
-class MyScriptTest extends PHPUnit_Framework_TestCase {
+class MyScriptTest extends TestCase {
     public function testMyFunction() {
         //include_once 'checkpassword.php';
         $result = checkpassword("password");
-        $this->assertTrue($result == $result);
+        $this->assertTrue($result == "Bad Password");
     }
 }

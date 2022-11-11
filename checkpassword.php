@@ -10,6 +10,26 @@ function checkpassword($password) {
 		echo "Good Password";
 	}
 }
+
+
+
+class CheckPassword {
+
+	private $password;
+	
+	public function getPassword() {
+		return $this->$password;
+	}
+	
+	public function setGumballs($amount) {
+		$this->gumballs = $amount;
+	}
+	
+	public function turnWheel() {
+		$this->setGumballs($this->getGumballs()-1);
+	}
+}
+
 	
 //$file = fopen("members.txt", "r");
 //$members = array();
