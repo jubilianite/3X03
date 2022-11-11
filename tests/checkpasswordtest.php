@@ -7,4 +7,5 @@ class test extends PHPUnit_Framework_TestCase {
         $this->assertEquals('Bad Password', $result);
     }
 }
+
 ?>
