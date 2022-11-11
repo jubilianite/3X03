@@ -12,7 +12,7 @@ pipeline {
 		}
 		stage('Test') {
 			steps {
-                sh './vendor/bin/phpunit tests'
+                sh './vendor/bin/phpunit --log-junit logs/unitreport.xmlk -c tests/phpunit.xml tests'
             }
 		}
 	}
