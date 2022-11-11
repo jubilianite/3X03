@@ -3,11 +3,11 @@ function CheckPassword($password) {
 	$array = explode("\n", file_get_contents('password.txt') );
 	if ( in_array($password, $array) ) 
 	{
-		echo "Bad Password";
+		return "Bad Password";
 	}
 	else
 	{
-		echo "Good Password";
+		return "Good Password";
 	}
 }
 	
