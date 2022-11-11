@@ -6,7 +6,7 @@ class CheckPasswordTest extends TestCase {
 		$path = dirname( dirname(__FILE__) );
         include_once $path . '/CheckPassword.php';		
         $result = CheckPassword('SUperComplexP@ssw0rd');
-        $this->assertTrue('Good Password' == $result);
+        $this->assertFalse('Good Password' == $result);
     }
 }
 
