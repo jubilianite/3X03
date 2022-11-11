@@ -1,6 +1,6 @@
 pipeline {
 	agent {
-		docker {
+		docker any {
 			image 'composer:latest'
 		}
 	}
