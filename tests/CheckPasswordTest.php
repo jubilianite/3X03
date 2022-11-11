@@ -1,5 +1,5 @@
 <?
-class CheckPasswordTest extends PHPUnit_Framework_TestCase {
+class CheckPasswordTest extends TestCase {
     public function testCheckPassword() {
         include_once 'CheckPassword.php';
         $result = CheckPassword("password");
