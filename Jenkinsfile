@@ -5,6 +5,11 @@ pipeline {
 		}
 	}
 	stages {
+		stage('OWASP DependencyCheck') {
+			steps {
+				dependencyCheck additionalArguments: '--format HTML --format XML', odcInstallation: 'Default'
+			}
+		}
 		stage('Build') {
 			steps {
 				sh 'composer install'
@@ -12,8 +17,13 @@ pipeline {
 		}
 		stage('Unit Test') {
 			steps {
-                sh './vendor/bin/phpunit tests'
+                sh './vendor/bin/phpunit test'
             }
+		}
+	}
+	post {
+		success {
+			dependencyCheckPublisher pattern: 'dependency-check-report.xml'
 		}
 	}
 }
