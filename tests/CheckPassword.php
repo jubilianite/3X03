@@ -1,5 +1,5 @@
 <?php
-function checkpassword($password) {
+function CheckPassword($password) {
 	$array = explode("\n", file_get_contents('password.txt') );
 	if ( in_array($password, $array) ) 
 	{
