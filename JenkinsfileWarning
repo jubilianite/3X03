@@ -1,21 +1,13 @@
 pipeline {
 	agent any
-	stages {
-	stage('QA checks') {
-		steps {
-			recordIssues([
-				enabledForFailure: true,
-				tools: [php()]
-			])
+		stages {
+			stage('QA checks') {
+				steps {
+					recordIssues([
+						enabledForFailure: true,
+						tools: [php()]
+					])
+				}
+			}
 		}
-	}
-	
-	}
-	post {
-		always {
-			junit testResults: '**/target/surefire-reports/TEST-*.xml'
-			recordIssues enabledForFailure: true, tools: [php()]
-			recordIssues enabledForFailure: true, tool: checkStyle()
-		}
-	}
 }
