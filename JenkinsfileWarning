@@ -1,11 +1,14 @@
 pipeline {
 	agent any
 	stages {
-		stage ('Checkout') {
-			steps {
-			git branch:'main', url: 'https://github.com/jubilianite/3X03'
-			}
+	stage('QA checks') {
+		steps {
+			recordIssues([
+				enabledForFailure: true,
+				tools: [php()]
+			])
 		}
+	}
 	stage ('Build') {
 		steps {
 			sh '/var/jenkins_home/apache-maven-3.6.3/bin/mvn --batch-mode -V -U -e clean verify -Dsurefire.useFile=false -Dmaven.test.failure.ignore'
