@@ -7,7 +7,7 @@ sudo su root
 cd /var/jenkins_home/3X03 && sudo git pull
 sudo chmod +x jenkins/scripts/deploy.sh
 sudo chmod +x jenkins/scripts/kill.sh
-sudo cp /var/jenkins_home/3X03 /var/www/html
+sudo cp -r /var/jenkins_home/3X03 /var/www/html
 sudo service apache2 start
 
 sleep 1
