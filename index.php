@@ -8,9 +8,9 @@
 			$email = trim($_POST['email']);
 			$password = trim($_POST['password']);
 			
-			if($email == "user@example.com")
+			if($email == "email@email.com")
 			{	
-				if($password == "password1234")
+				if($password == "SecuredP@ssw0rd")
 				{
 					$_SESSION['user_id'] = $email;
 					
