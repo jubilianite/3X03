@@ -1,11 +1,11 @@
 pipeline {
 	agent any
 		stages {
-			stage('QA checks') {
+			stage('QA Checks') {
 				steps {
 					recordIssues([
 						enabledForFailure: true,
-						tools: [php()]
+						tools: [php(), phpCodeSniffer()]
 					])
 				}
 			}
