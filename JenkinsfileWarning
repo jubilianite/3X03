@@ -5,7 +5,7 @@ pipeline {
 				steps {
 					recordIssues([
 						enabledForFailure: true,
-						tools: [php(), phpCodeSniffer()]
+						tools: [php()]
 					])
 				}
 			}
