@@ -1,13 +1,13 @@
 <?php
-function CheckPassword($password) {
+function checkpassword($password) {
 	$array = explode("\n", file_get_contents('password.txt') );
 	if ( in_array($password, $array) ) 
 	{
-		return "Bad Password";
+		echo "Bad Password";
 	}
 	else
 	{
-		return "Good Password";
+		echo "Good Password";
 	}
 }
 	
